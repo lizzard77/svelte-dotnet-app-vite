@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>svelte_dotnet_app_vite</RootNamespace>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <Content Remove="package.json" />
+        <Content Remove="package*.json" />
+        <Content Remove="src\**\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+    <Content Remove="wwwroot\**" />
+    <Content Include="wwwroot\**" Watch="false" />
+</ItemGroup>
+
+</Project>
