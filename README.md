@@ -12,7 +12,7 @@ LTS version of .NET). For this purpose, `global.json` is now included in the roo
 If you prefer to use .NET7, change the line with the target framework moniker in `svelte-dotnet-app-vite.csproj` 
 to 
 
-`<TargetFramework>net6.0</TargetFramework>`
+`<TargetFramework>net7.0</TargetFramework>`
 
 and delete `global.json`.
 
