@@ -16,7 +16,7 @@
 
 <main>
   <img src={logo} alt="Svelte Logo" />
-  <h1>Hello .NET6 world!</h1>
+  <h1>Hello .NET7 world!</h1>
 
   <Counter />
 

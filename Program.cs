@@ -24,12 +24,9 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-    endpoints.MapRazorPages();                
-    endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
-    endpoints.MapFallbackToFile("index.html").AllowAnonymous();
-});
+app.MapControllers();
+app.MapRazorPages();
+app.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
+app.MapFallbackToFile("index.html").AllowAnonymous();
 
 app.Run();
