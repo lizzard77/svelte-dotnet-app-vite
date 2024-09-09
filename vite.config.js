@@ -8,9 +8,10 @@ export default defineConfig({
         outDir: "wwwroot"
     },
     server: {
+        port: 3000,
         proxy: {
           '/api': {
-                target : 'http://localhost:5294', 
+                target : 'http://localhost:5173', 
                 secure: false
             }
         }
