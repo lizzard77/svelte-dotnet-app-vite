@@ -2,6 +2,9 @@
   import logo from './assets/svelte.png'
   import Counter from './lib/Counter.svelte'
 
+  // top-level awaiter remains a promise; in Svelte 5 you can keep this
+  // and use {#await ...} in markup. If you enable experimental.async,
+  // you could also use await expressions in scripts.
   const awaiter = fetch('/api/counter')
     .then(res => res.json())
     .then(data => {
@@ -16,12 +19,12 @@
 
 <main>
   <img src={logo} alt="Svelte Logo" />
-  <h1>Hello .NET7 world!</h1>
+  <h1>Hello .NET8 world!</h1>
 
   <Counter />
 
   {#await awaiter}
-    <progress />
+    <progress></progress>
   {:then a} 
     {JSON.stringify(a)}
   {/await}
